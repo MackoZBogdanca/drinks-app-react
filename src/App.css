@@ -1,11 +1,12 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Righteous", cursive;
 }
 
 .app {
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .search-form {
@@ -13,23 +14,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5em;
 }
 
 .search-bar {
-  width: 50%;
+  width: 30%;
   border: none;
   padding: 10px;
+  background-color: #dbdcd7;
 }
 
 .search-button {
-  background: lightcoral;
+  background: #28a2b7;
   border: none;
   padding: 10px 20px;
-  color: white;
+  color: #dbdcd7;
+}
+
+.title {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5em;
+  color: #dbdcd7;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: #6c4f63;
 }
 
 .recipes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.error {
+  text-align: center;
+  color: #dbdcd7;
 }
