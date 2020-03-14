@@ -36,7 +36,7 @@ const App = _ => {
     setSearch("");
   };
 
-  // console.log(recipes);
+  console.log(recipes);
 
   if (loading) {
     return (
@@ -48,7 +48,7 @@ const App = _ => {
             type="text"
             value={search}
             onChange={updateSearch}
-            placeholder="Search by ingredient"
+            placeholder="Search by name or main ingredient"
           />
           <button className="search-button" type="submit">
             Search
@@ -67,7 +67,7 @@ const App = _ => {
             type="text"
             value={search}
             onChange={updateSearch}
-            placeholder="Search by ingredient"
+            placeholder="Search by name or main ingredient"
           />
           <button className="search-button" type="submit">
             Search
@@ -107,7 +107,7 @@ const App = _ => {
             type="text"
             value={search}
             onChange={updateSearch}
-            placeholder="Search by ingredient"
+            placeholder="Search by name or main ingredient"
           />
           <button className="search-button" type="submit">
             Search

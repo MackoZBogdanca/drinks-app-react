@@ -2,11 +2,19 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Righteous", cursive;
+  background: url(images/jordan-mcqueen-u9tAl8WR3DI-unsplash2.jpg) no-repeat
+    center fixed;
+  /* background-position: center;
+  background-repeat: no-repeat; */
+  background-size: cover;
 }
 
 .app {
   min-height: 100vh;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  /* background-image: url(images/jordan-mcqueen-u9tAl8WR3DI-unsplash2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .search-form {
@@ -37,6 +45,8 @@ body {
   justify-content: center;
   padding-top: 0.5em;
   color: #dbdcd7;
+  text-shadow: 3px 3px 2px #6c4f63;
+  font-size: 40px;
 }
 
 .search-button:hover {
@@ -53,4 +63,5 @@ body {
 .error {
   text-align: center;
   color: #dbdcd7;
+  text-shadow: 2px 2px 1px #6c4f63;
 }
