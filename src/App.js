@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Recipe from "./compoents/Recipe";
+import Drink from "./compoents/Drink";
 import "./App.css";
 
 const App = _ => {
@@ -7,22 +7,22 @@ const App = _ => {
   // const APP_KEY = "428e44b94812d8560d2f1237a2a178dd";
   const APP_KEY = "1";
 
-  const [recipes, setRecipes] = useState([]);
+  const [drinks, setDrinks] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("margarita");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getRecipes();
+    getDrinks();
   }, [query]);
 
-  const getRecipes = async () => {
+  const getDrinks = async () => {
     const response = await fetch(
       // `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
       `https://www.thecocktaildb.com/api/json/v1/${APP_KEY}/search.php?s=${query}`
     );
     const data = await response.json();
-    setRecipes(data.drinks);
+    setDrinks(data.drinks);
     setLoading(false);
   };
 
@@ -36,7 +36,8 @@ const App = _ => {
     setSearch("");
   };
 
-  console.log(recipes);
+  // console.log(drinks);
+  // console.log(drinks.idDrink);
 
   if (loading) {
     return (
@@ -57,7 +58,7 @@ const App = _ => {
         <h1 className="error">Loading...</h1>
       </div>
     );
-  } else if (recipes) {
+  } else if (drinks) {
     return (
       <div className="app">
         <h1 className="title">Search drinks app</h1>
@@ -73,28 +74,26 @@ const App = _ => {
             Search
           </button>
         </form>
-        <div className="recipes">
-          {recipes.map(recipe => (
-            <Recipe
-              // key={recipe.recipe.label}
-              title={recipe.strDrink}
-              img={recipe.strDrinkThumb}
-              glass={recipe.strGlass}
-              instructions={recipe.strInstructions}
-              ingredient1={recipe.strIngredient1}
-              ingredient2={recipe.strIngredient2}
-              ingredient3={recipe.strIngredient3}
-              ingredient4={recipe.strIngredient4}
-              ingredient5={recipe.strIngredient5}
-              ingredient6={recipe.strIngredient6}
-              ingredient7={recipe.strIngredient7}
-              ingredient8={recipe.strIngredient8}
-              // calories={recipe.recipe.calories}
-              // image={recipe.recipe.image}
-              // ingredients={recipe.recipe.ingredients}
-            />
-          ))}
-        </div>
+        {/* <div className="drinks"> */}
+        {/* {drinks.map(drink => ( */}
+        <Drink
+          drinks={drinks}
+          // id={drink.idDrink}
+          // title={drink.strDrink}
+          // img={drink.strDrinkThumb}
+          // glass={drink.strGlass}
+          // instructions={drink.strInstructions}
+          // ingredient1={drink.strIngredient1}
+          // ingredient2={drink.strIngredient2}
+          // ingredient3={drink.strIngredient3}
+          // ingredient4={drink.strIngredient4}
+          // ingredient5={drink.strIngredient5}
+          // ingredient6={drink.strIngredient6}
+          // ingredient7={drink.strIngredient7}
+          // ingredient8={drink.strIngredient8}
+        />
+        {/* // ))} */}
+        {/* </div> */}
       </div>
     );
   } else {

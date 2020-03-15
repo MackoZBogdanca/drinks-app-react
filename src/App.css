@@ -54,11 +54,11 @@ body {
   background-color: #6c4f63;
 }
 
-.recipes {
+/* .drinks {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
+} */
 
 .error {
   text-align: center;

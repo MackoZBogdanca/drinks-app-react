@@ -1,4 +1,10 @@
-.recipes {
+.alldrinks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.drinks {
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgb(88, 88, 88);
   margin: 20px;
@@ -12,7 +18,7 @@
   background-size: cover;
 }
 
-.recipe {
+.drink {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -63,7 +69,7 @@
 }
 
 @media (max-width: 1200px) {
-  .recipes {
+  .drinks {
     width: 75%;
   }
   .image {
@@ -80,7 +86,7 @@
 }
 
 @media (max-width: 700px) {
-  .recipes {
+  .drinks {
     flex-direction: column;
   }
   .image {
